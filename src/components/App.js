@@ -1,19 +1,16 @@
-import "../App.css";
+import "../App.css"; //do we want to keep template css file or delete and start from scratch?
+import NavBar from "./NavBar";
+import HomePage from "./HomePage";
+import MovieReviews from "./MovieReviews.js";
+import OwenWilsonFanPage from "./OwenWilsonFanPage";
 
 function App() {
   return (
     <div className="App">
-      <div>NavBar</div>
-      <div>
-        {" "}
-        Home
-        <div>New Releases</div>
-        <div>
-          Search by Title
-          <select>Choose Genre</select>
-        </div>
-      </div>
-      <form>Form (on separate page)</form>
+      <NavBar />
+      <HomePage />
+      <MovieReviews />
+      <OwenWilsonFanPage />
     </div>
   );
 }
@@ -25,9 +22,9 @@ export default App;
 
 App
   NavBar
-  Home
+  HomePage
+    SearchBar  
     NewReleases
-    Search
   MovieReviews (add form to add your own reviews)
   OwenWilsonFanPage
 
