@@ -3,14 +3,23 @@ import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import MovieReviews from "./MovieReviews.js";
 import OwenWilsonFanPage from "./OwenWilsonFanPage";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <HomePage />
-      <MovieReviews />
-      <OwenWilsonFanPage />
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/reviews">
+          <MovieReviews />
+        </Route>
+        <Route path="/wow">
+          <OwenWilsonFanPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
