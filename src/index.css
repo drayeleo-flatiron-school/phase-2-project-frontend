@@ -10,6 +10,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/****************************
+  HomePage.js & App.js related CSS
+*****************************/
+
 button a {
   padding: 0.5rem 0.75rem;
   text-decoration: none;
@@ -22,6 +26,24 @@ button a {
   transition: background-color 0.2s;
 }
 
+.site-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 a {
+  text-decoration: none;
+  font: inherit;
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  color: black;
+}
+
+/****************************
+  FanPage related CSS
+*****************************/
+
 .OwenWilsonFanPage {
   background-color: black;
   color: white;
@@ -33,6 +55,9 @@ button a {
   background-size: 150px;
 } */
 
+/****************************
+  WilsonCard.js related CSS 
+*****************************/
 .WilsonCardSection {
   display: grid;
   grid-template-columns: repeat(5, 16.8%);
@@ -49,18 +74,4 @@ button a {
 .owen img {
   width: 50px;
   height: 50px;
-}
-
-.site-header {
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 a {
-  text-decoration: none;
-  font: inherit;
-  font-size: 28px;
-  font-weight: 500;
-  cursor: pointer;
-  color: black;
 }
