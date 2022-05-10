@@ -2,7 +2,7 @@ import "../App.css"; //do we want to keep template css file or delete and start 
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import MovieReviews from "./MovieReviews.js";
-import OwenWilsonFanPage from "./OwenWilsonFanPage";
+import OwenWilsonFanPage from "./OwenWilsonFanPage.js";
 import { Switch, Route } from "react-router-dom";
 
 function App() {

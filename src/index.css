@@ -16,7 +16,7 @@ button a {
   border: none;
   border-bottom: none;
   font: inherit;
-  font-weight: 250;
+  font-weight: 500;
   cursor: pointer;
   color: black;
   background-color: var(--background);
@@ -24,9 +24,7 @@ button a {
   transition: background-color 0.2s;
 }
 
-
-
-.OwenWilsonFanPage{
+<<<<<<< Updated upstream .OwenWilsonFanPage {
   background-color: black;
   color: white;
 }
@@ -44,6 +42,18 @@ button a {
 }
 
 .WilsonCard img {
-  max-width:100%;
+  max-width: 100%;
   border-radius: 10% 25%;
+}
+
+.owen img {
+  width: 50px;
+  height: 50px;
+}
+
+.site-header {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
