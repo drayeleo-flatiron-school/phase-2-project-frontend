@@ -19,12 +19,10 @@ button a {
   font-weight: 500;
   cursor: pointer;
   color: black;
-  background-color: var(--background);
-  border: 2px solid var(--dark-turquoise);
   transition: background-color 0.2s;
 }
 
-<<<<<<< Updated upstream .OwenWilsonFanPage {
+.OwenWilsonFanPage {
   background-color: black;
   color: white;
 }
@@ -52,8 +50,15 @@ button a {
 }
 
 .site-header {
-  background-color: grey;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h1 a {
+  text-decoration: none;
+  font: inherit;
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  color: black;
 }

@@ -5,13 +5,13 @@ function NavBar() {
   return (
     <header className="site-header">
       <nav className="nav">
-        <Button variant="outlined" size="large">
+        <h1>
           <NavLink exact to="/">
-            Cinephile
+            CINEPHILE
           </NavLink>
-        </Button>
+        </h1>
         <div className="NavBar">
-          <Button variant="outlined" size="large">
+          <Button variant="outlined" size="medium">
             <NavLink className="button" exact to="/reviews">
               Movie Reviews
             </NavLink>
