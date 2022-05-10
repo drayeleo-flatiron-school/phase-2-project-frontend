@@ -10,13 +10,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-button {
+button a {
   padding: 0.5rem 0.75rem;
+  text-decoration: none;
   border: none;
   border-bottom: none;
   font: inherit;
   font-weight: 250;
-  color: inherit;
   cursor: pointer;
   color: black;
   background-color: var(--background);
