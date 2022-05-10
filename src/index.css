@@ -25,6 +25,7 @@ button a {
 .OwenWilsonFanPage {
   background-color: black;
   color: white;
+  /* cursor: url('../public/owen_wilson.png'), auto;	 */
 }
 
 /* .WilsonHeadBackground {
@@ -42,6 +43,7 @@ button a {
 .WilsonCard img {
   max-width: 100%;
   border-radius: 10% 25%;
+  /* cursor: url('https://camo.githubusercontent.com/2310f53bded4253f3cabebc01e1b5533e3df9f4e9195ead7eab86467987fb20c/68747470733a2f2f696d616765732e6374666173736574732e6e65742f6273386e74776b6b6c6675612f6138565a566c63477a4e536f6a4c6a717173306d352f39623436313038623032336661393239663430643662323631636231366338362f5472616e73706172656e745f4f77656e5f57696c736f6e2e706e67'), auto; */
 }
 
 .owen img {
