@@ -12,6 +12,11 @@ function NavBar() {
         </h1>
         <div className="NavBar">
           <Button variant="outlined" size="medium">
+            <NavLink className="button" exact to="/">
+              Home
+            </NavLink>
+          </Button>
+          <Button variant="outlined" size="medium">
             <NavLink className="button" exact to="/reviews">
               Movie Reviews
             </NavLink>

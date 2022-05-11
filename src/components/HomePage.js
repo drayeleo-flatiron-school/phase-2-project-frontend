@@ -1,12 +1,12 @@
 import SearchBar from "./SearchBar.js";
-import NewReleases from "./NewReleases";
+import Highlights from "./Highlights";
 
 function HomePage() {
   return (
     <div className="HomePage">
       HomePage
-      <SearchBar  />
-      <NewReleases />
+      <SearchBar />
+      <Highlights />
     </div>
   );
 }

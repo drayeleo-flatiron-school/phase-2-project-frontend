@@ -63,6 +63,7 @@ h1 a {
   grid-template-columns: repeat(5, 16.8%);
   column-gap: 4%;
   row-gap: 4%;
+  padding: 0 5%;
 }
 
 .WilsonCard img {
