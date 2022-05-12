@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 
-function SearchBar({ searchInput, onSearchChange }) {
+function SearchBar({ searchInput }) {
 
   return ( 
   <div className="SearchBar">
