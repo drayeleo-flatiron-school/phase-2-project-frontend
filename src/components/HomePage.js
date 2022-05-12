@@ -1,12 +1,12 @@
 import SearchBar from "./SearchBar.js";
-import Highlights from "./Highlights";
+import Highlight from "./Highlight";
 
-function HomePage() {
+function HomePage({ highlightedMovie }) {
   return (
     <div className="HomePage">
       HomePage
       <SearchBar />
-      <Highlights />
+      <Highlight highlightedMovie={highlightedMovie} />
     </div>
   );
 }

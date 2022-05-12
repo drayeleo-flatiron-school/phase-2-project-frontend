@@ -4,14 +4,32 @@ import HomePage from "./HomePage";
 import MovieReviews from "./MovieReviews.js";
 import OwenWilsonFanPage from "./OwenWilsonFanPage.js";
 import { Switch, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [highlightedMovie, setHighlightedMovie] = useState({});
+
+  const url = "http://localhost:3000/movies";
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        const index = Math.floor(Math.random() * data.length);
+        // console.log("index: ", index);
+        setHighlightedMovie(data[index]);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePage highlightedMovie={highlightedMovie} />
         </Route>
         <Route path="/reviews">
           <MovieReviews />
