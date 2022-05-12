@@ -1,22 +1,23 @@
-import "../App.css"; //do we want to keep template css file or delete and start from scratch?
-import NavBar from "./NavBar";
-import HomePage from "./HomePage";
-import MovieReviews from "./MovieReviews.js";
-import OwenWilsonFanPage from "./OwenWilsonFanPage.js";
-import { Switch, Route } from "react-router-dom";
+import '../App.css'; //do we want to keep template css file or delete and start from scratch?
+import NavBar from './NavBar';
+import HomePage from './HomePage';
+import MovieReviews from './MovieReviews.js';
+import OwenWilsonFanPage from './OwenWilsonFanPage.js';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
+  console.log('plz');
   return (
-    <div className="App">
+    <div className='App'>
       <NavBar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <HomePage />
         </Route>
-        <Route path="/reviews">
+        <Route path='/reviews'>
           <MovieReviews />
         </Route>
-        <Route path="/wow">
+        <Route path='/wow'>
           <OwenWilsonFanPage />
         </Route>
       </Switch>
