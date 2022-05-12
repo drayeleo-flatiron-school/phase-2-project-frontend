@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import MovieReviewForm from './MovieReviewForm';
-import MovieReviewList from './MovieReviewList';
-
 function MovieReviews() {
   const [movieReviews, setMovieReviews] = useState([]);
 
