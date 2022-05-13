@@ -1,7 +1,8 @@
-import React from 'react';
-import MovieReview from './MovieReview';
+import React from "react";
+import MovieReview from "./MovieReview";
 
 function MovieReviewList({ movieReviews }) {
+  console.log(movieReviews);
   return (
     <table>
       <tbody>
