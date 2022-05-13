@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function MovieReviewForm({ addMovieReview }) {
   const [form, setForm] = useState({
-    Poster: '',
-    Year: '',
-    Title: '',
-    Rating: '',
-    Review: '',
+    Poster: "",
+    Year: "",
+    Title: "",
+    Rating: "",
+    Review: "",
   });
 
   function handleChange(e) {
@@ -19,78 +19,70 @@ function MovieReviewForm({ addMovieReview }) {
     //console.log(form);
 
     const formData = { ...form, Rating: parseInt(form.Rating) };
-    console.log(formData);
+    console.log("formData: ", formData);
+    console.log("jsonified: ", JSON.stringify(formData));
 
-    fetch('http://localhost:3000/movieReviews', {
-      method: 'POST',
+    fetch("http://localhost:3000/movieReviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(formData),
     })
       .then((response) => response.json())
-      .then((result) => {
-        console.log('Success:', result);
+      .then((data) => {
+        console.log("Success:", data);
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
 
-    // fetch(
-    //   'http://localhost:3000/movieReviews',
-    //   {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application.json' },
-    //     body: JSON.stringify(form),
-    //   }
-    //     .then((response) => response.json())
-    //     .then((newMovieReview) => {
-    //       //addMovieReview(newMovieReview)
-    //       console.log(form);
-    //     })
-    // );
+    addMovieReview(formData);
   }
 
   return (
     <section>
-      <form onSubmit={handleSubmit} className='movieReviewForm'>
+      <form onSubmit={handleSubmit} className="movieReviewForm">
         <h3>Add Your Movie Reviews!</h3>
         <div>
           <input
-            type='text'
+            type="text"
             value={form.Poster}
-            name='Poster'
-            placeholder='Movie poster URL'
+            name="Poster"
+            placeholder="Movie poster URL"
             onChange={handleChange}
           />
           <input
-            type='text'
+            type="text"
             value={form.Year}
-            name='Year'
-            placeholder='Movie year'
+            name="Year"
+            placeholder="Movie year"
             onChange={handleChange}
           />
           <input
-            type='text'
+            type="text"
             value={form.Title}
-            name='Title'
-            placeholder='Movie title'
+            name="Title"
+            placeholder="Movie title"
             onChange={handleChange}
           />
           <input
-            type='number'
+            type="number"
             value={form.Rating}
-            name='Rating'
-            placeholder='Your rating'
-            step='1'
+            name="Rating"
+            placeholder="Your rating"
+            step="1"
             onChange={handleChange}
           />
           <input
-            type='text'
+            type="text"
             value={form.Review}
-            name='Review'
-            placeholder='Your review'
+            name="Review"
+            placeholder="Your review"
             onChange={handleChange}
           />
         </div>
-        <button type='submit'>Add</button>
+        <button type="submit">Add</button>
       </form>
     </section>
   );
