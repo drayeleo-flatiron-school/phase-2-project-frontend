@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 function MovieReview({ review }) {
   return (
     <tr>
-      <td className='WilsonCard'>
-        <img src={review.Poster} alt={review.Title} />
+      <td className="WilsonCard">
+        <img className="reviewImage" src={review.Poster} alt={review.Title} />
       </td>
       <td>{review.Year}</td>
       <td>{review.Title}</td>
