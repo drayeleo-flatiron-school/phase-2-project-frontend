@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 function MovieReviewForm({ addMovieReview }) {
   const [form, setForm] = useState({
-    poster: '',
-    year: '',
-    title: '',
-    rating: '',
-    review: '',
+    Poster: '',
+    Year: '',
+    Title: '',
+    Rating: '',
+    Review: '',
   });
 
   function handleChange(e) {
@@ -16,16 +16,36 @@ function MovieReviewForm({ addMovieReview }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(
-      'http://localhost:3000/movieReviews',
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application.json' },
-        body: JSON.stringify(form),
-      }
-        .then((response) => response.json())
-        .then((newMovieReview) => addMovieReview(newMovieReview))
-    );
+    //console.log(form);
+
+    const formData = { ...form, Rating: parseInt(form.Rating) };
+    console.log(formData);
+
+    fetch('http://localhost:3000/movieReviews', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log('Success:', result);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+    // fetch(
+    //   'http://localhost:3000/movieReviews',
+    //   {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application.json' },
+    //     body: JSON.stringify(form),
+    //   }
+    //     .then((response) => response.json())
+    //     .then((newMovieReview) => {
+    //       //addMovieReview(newMovieReview)
+    //       console.log(form);
+    //     })
+    // );
   }
 
   return (
@@ -35,37 +55,37 @@ function MovieReviewForm({ addMovieReview }) {
         <div>
           <input
             type='text'
-            value={form.poster}
-            name='poster'
+            value={form.Poster}
+            name='Poster'
             placeholder='Movie poster URL'
             onChange={handleChange}
           />
           <input
             type='text'
-            value={form.year}
-            name='year'
+            value={form.Year}
+            name='Year'
             placeholder='Movie year'
             onChange={handleChange}
           />
           <input
             type='text'
-            value={form.title}
-            name='title'
+            value={form.Title}
+            name='Title'
             placeholder='Movie title'
             onChange={handleChange}
           />
           <input
             type='number'
-            value={form.rating}
-            name='rating'
+            value={form.Rating}
+            name='Rating'
             placeholder='Your rating'
             step='1'
             onChange={handleChange}
           />
           <input
             type='text'
-            value={form.review}
-            name='review'
+            value={form.Review}
+            name='Review'
             placeholder='Your review'
             onChange={handleChange}
           />

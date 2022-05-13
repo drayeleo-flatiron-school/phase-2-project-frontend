@@ -3,7 +3,9 @@ import React from 'react';
 function MovieReview({ review }) {
   return (
     <tr>
-      <td>{review.Poster}</td>
+      <td className='WilsonCard'>
+        <img src={review.Poster} alt={review.Title} />
+      </td>
       <td>{review.Year}</td>
       <td>{review.Title}</td>
       <td>{review.Review}</td>
