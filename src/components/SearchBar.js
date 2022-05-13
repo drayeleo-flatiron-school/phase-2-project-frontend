@@ -1,28 +1,29 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from "@mui/material/Button";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function SearchBar({ searchInput }) {
+  function onSearchChange() {
+    console.log('temp change');
+  }
 
-  return ( 
-  <div className="SearchBar">
-    SearchBar
-    <input 
-      value={searchInput}
-      onChange={(e) => onSearchChange(e.target.value)}
-      type="text"
-      placeholder="Search by Title"
+  return (
+    <div className='SearchBar'>
+      SearchBar
+      <input
+        value={searchInput}
+        onChange={(e) => onSearchChange(e.target.value)}
+        type='text'
+        placeholder='Search by Title'
       />
-  
-    <Button variant="outlined" size="small">
-      <NavLink className="button" exact to="/search">
-        Search
-      </NavLink>
-    </Button>
+      <Button variant='outlined' size='small'>
+        <NavLink className='button' exact to='/search'>
+          Search
+        </NavLink>
+      </Button>
     </div>
   );
 }
-
 
 export default SearchBar;
 
